@@ -1,0 +1,44 @@
+h1 {
+    color: white;
+    font-size: 400%;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+h2 {
+    
+    font-size: 350%;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+p, ul, li {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 150%;
+}
+
+.card-footer{
+    font-size: 150%;
+}
+
+.blockquote-footer{
+    color: rgb(211, 218, 218);
+    font-size: 100%;
+}
+
+.zoom {
+    transition: transform .2s; 
+ }
+  
+.zoom:hover {
+    transform: scale(1.02); 
+    border: 3px solid black;
+    overflow: hidden;  
+}
+
+ul {
+    list-style-position: inside;
+}
