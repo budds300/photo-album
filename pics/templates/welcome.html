@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+
+{% block content %}
+
+{{block.super}}
+
+<h1 class="text-center"> Welcome to my Gallery</h1><br><br>
+
+<div class="container">
+    <div class="row">
+    {% for image in images %}
+    <div class="col-md-4 mt-4">
+      <div class="card zoom">
+            <a href="{% url 'image' image.id %}"><img src="{{image.gallery_image.url}}" style="width:100%;height:56%;" class="img-responsive" alt="Image"></a>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</div>
+
+{% endblock %}

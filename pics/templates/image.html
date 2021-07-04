@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-lg-3"></div>
+    <div class="col-md-6 col-lg-6">
+      <div class="card text-center">
+        <img src="{{image.gallery_image.url}}" class="img-responsive" alt="">
+        <div class="card-title">
+          <h3 class="text-center " style="font-weight: 700;">{{image.image_name|title}}</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-title">Location taken: {{image.location}}</p>
+          <p class="card-title">Category: {{image.category}}</p>
+          <p class="card-text">Description: {{image.image_description}}</p><br>
+          <a href="{% url 'welcome' %}" class="btn btn-primary">Back to gallery</a>
+        </div>
+        <div class="card-footer text-muted"><br>
+          Posted on: {{image.pub_date}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-lg-3"></div>
+  </div>
+</div>
+</div><br><br><br><br><br>
+
+{% endblock %}
