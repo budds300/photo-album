@@ -105,14 +105,7 @@ WSGI_APPLICATION = 'gallery.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'photos',
-        'USER': 'moringa',
-        'PASSWORD':'hello',
-    }
-}
+
 
 
 
@@ -164,8 +157,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 django_heroku.settings(locals())
 
 cloudinary.config( 
-  cloud_name = "dorvaflc1", 
-  api_key = "749346157269235", 
-  api_secret = "9vFezvE23Pigwmczbim12NLoayk",
+  cloud_name = config('CLOUD_NAME'), 
+  api_key = config('API_KEY'), 
+  api_secret = config('API_SECRET'),
   
 )
