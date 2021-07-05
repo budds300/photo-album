@@ -14,9 +14,9 @@ import os
 import django_heroku
 import dj_database_url
 from decouple import config,Csv
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
+# import cloudinary
+# import cloudinary.uploader
+# import cloudinary.api
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -158,7 +158,7 @@ django_heroku.settings(locals())
 
 cloudinary.config( 
   cloud_name = config('CLOUD_NAME'), 
-  api_key = config('API_KEY'), 
+  api_key = config('API_KEY'),
   api_secret = config('API_SECRET'),
   
 )
